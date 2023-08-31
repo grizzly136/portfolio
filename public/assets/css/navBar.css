@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+overflow:hidden;
+
+}
+
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+
+}
+
+/*logo*/
+.logo{
+        font-weight: bolder;
+        color:white;
+        font-size: 1.5rem;
+        margin-left: 5vw;
+        position: relative;
+        z-index: 11;
+        font-family: 'Aclonica', sans-serif;
+    }
+.logo:hover{
+    color:gray;
+}
+
+/*nav-links*/
+.nav-links{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    position: absolute;
+    right:0;
+    top:0;
+    background: rgb(195,195,195);
+    background: radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(55,60,73,1) 99%, rgba(47,48,66,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    z-index: 1;
+    transition: transform .65s ease-in-out;
+
+
+}
+
+.nav-active{
+    transform:translateY(0%);
+    z-index: 10;
+    transition: transform .65s ease-in;
+}
+.nav-links a{
+
+    text-decoration: none;
+    font-size: 4.5rem;
+    color: aliceblue;
+
+
+}
+.nav-links li{
+    list-style: none;
+    opacity: 0;
+    margin-top: 50px;
+}
+.nav-links a.nl:hover{
+   font-size: 5rem;
+}
+
+
+/*ham-burger*/
+.burger div{
+        width:40px;
+        height:3px;
+        margin:5px;
+        background:rgb(255, 255, 255);
+        transition: transform 0.5s ease-in;
+
+    }
+
+
+.burger{
+        margin:auto 1.5rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 11;
+        text-align: center;
+
+
+
+    }
+.hamBurgerShape .line1{
+        transform: rotate(45deg) translateX(5px) ;
+        }
+.hamBurgerShape .line2{
+            transform: rotate(-45deg) translateX(5px);
+        }
+
+/*social media*/
+
+.social-media{
+    margin-bottom:0;
+    display: flex;
+    margin-left: 20vw;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 11;
+}
+.social-media li{
+list-style: none;
+}
+.social-media a{
+    text-decoration: none;
+
+}
+.social-media-nav .fab:hover{
+    font-size: 2rem;
+
+}
+
+.social-ham-wrap{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-right: 2vw;
+}
+.social-media-nav{
+    display: none;
+
+
+}
+.social-media-nav li{
+    margin: 10px;
+}
+
+/*social media colors and size*/
+.fab{
+    color:rgb(241, 241, 241);
+    font-size: 1.5rem;
+    margin: 5px 1vw;
+
+}
+.fab:hover{
+    color: gray;
+}
+.fa-twitter{
+    color:rgb(0,172,238);
+    }
+.fa-facebook{
+        color:rgb(0, 0, 155);
+    }
+.fa-instagram{
+        color: transparent;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+.fa-linkedin{
+        color:rgb(0,119,189);
+    }
+
+
+
+/* keyframes */
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform:translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*media  screen*/
+
+
+@media (max-width:1100px){
+    .burger div{
+        width:35px;
+
+    }
+    .nav-links a{
+
+        font-size: 4rem;
+    }
+}
+
+
+
+
+@media (max-width:800px){
+    .burger div{
+        width:30px;
+
+    }
+    .social-media{
+        display: none;
+    }
+    .nav-links a{
+
+        font-size: 3.75rem;
+    }
+    .nav-links{
+        justify-content: center;
+    }
+    .social-media-nav{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+
+
+    }
+    .nav-active{
+        justify-content: center;
+
+            }
+    .nav-links li{
+        margin-top: 35px;
+    }
+
+
+}
+
+
+
+
+@media (max-width:500px){
+    .burger div{
+        width:25px;
+
+    }
+    .nav-links a{
+
+        font-size: 2.5rem;
+    }
+    .nav-active{
+        justify-content: center;
+
+            }
+    .nav-links li{
+        margin-top: 25px;
+    }
+    .social-media-nav{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,115 @@
+body{
+	background-color: gray;
+}
+.cards{
+	position: absolute;
+	top: 15vh;
+	left: 20vw;
+	width: 60vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	border-radius: 1%;
+	overflow: hidden;
+	background-color: honeydew;
+}
+.cards:hover{
+	box-shadow: 10px 10px 100px rgb(255, 255, 255);
+}
+.contact{
+	height: 30px;
+	width:150px;
+	background-color: gray;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+	left:5vw;
+	top: 4vw;
+	cursor: pointer;
+
+	border-radius: 20px;
+}
+.contact-form{
+	position: absolute;
+	width: 60vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	transform: translateX(-100%);
+	background-color: rgb(224, 224, 224);
+
+}
+.direct-contact *{
+	margin: 0.5vw 1vw;
+}
+.close{
+	position: absolute;
+	right:5vw;
+	top: 4vw;
+	cursor: pointer;
+}
+.active{
+	transform: translateX(0%);
+	transition: 0.3s ease-in;
+}
+.inactive{
+	transform: translateX(-100%);
+	transition: 0.3s ease-in;
+}
+.form-signin *{
+	width: 45vw;
+	margin: 1vw;
+	height: 2rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content:space-around;
+
+}
+@media (max-width:700px){
+	.cards{
+		width: 90vw;
+		height: 70vh;
+		left: 5vw;
+		top: 15vh;
+
+	}
+	.contact-form{
+		width: 90vw;
+		height: 70vh;
+	}
+}
+@media (max-width:700px){
+	.form-signin *{
+		width: 70vw;
+		margin: 1vw;
+		height: 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content:space-around;
+	
+	}
+	.direct-contact *{
+		margin: 1.5vw 1vw;
+	}
+}
+
+.d{
+	margin: 2vw;
+	
+}
+.social-mediac{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.social-mediac li{
+	list-style: none;
+
+}
