@@ -2,6 +2,7 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const app=express();
+const PORT = process.env.PORT||3000;
 app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.get("/",(req,res)=>{
@@ -17,4 +18,6 @@ app.get("/contact",(req,res)=>{
 app.get("/projects",(req,res)=>{
   res.sendFile(__dirname+"/html/projects.html");
 });
-app.listen(process.env.PORT||3000);
+app.listen(PORT,(req,res)=>{
+  console.log("listening on port ",PORT)
+});
