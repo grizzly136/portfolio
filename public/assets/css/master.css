@@ -503,3 +503,7 @@ body{
 .scroll{
   color: #fff;
 }
+
+.fab:hover{
+  color:black;
+}
